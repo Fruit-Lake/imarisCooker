@@ -6,22 +6,8 @@ imarisCooker是一个用于将Imaris软件的IMS格式文件转换为TIFF格式�
 
 ## 安装说明
 
-### 依赖库
-
-本工具依赖以下Python库：
-
-```
-h5py
-numpy
-tifffile
-tqdm
-argparse
-```
-
-可以使用pip安装这些依赖：
-
 ```bash
-pip install h5py numpy tifffile tqdm
+pip install imaris-cooker
 ```
 
 ## 使用方法
@@ -29,7 +15,17 @@ pip install h5py numpy tifffile tqdm
 ### 命令行参数
 
 ```bash
-python ims_to_tiff.py <file_path> [-save_path SAVE_PATH] [-specify_channel SPECIFY_CHANNEL]
+# bash
+imaris-cooker <file_path> [-save_path SAVE_PATH] [-specify_channel SPECIFY_CHANNEL]
+```
+### Python
+```python
+# python
+import imaris_cooker
+file_path = 'your .ims file path'
+save_path = 'export .tiff file path'
+specify_channel = [0,2] # specify channel index, None to extract all channel.
+imaris_cooker.convert_ims_to_tiff(file_path,save_path,specify_channel)
 ```
 
 参数说明：
@@ -41,11 +37,23 @@ python ims_to_tiff.py <file_path> [-save_path SAVE_PATH] [-specify_channel SPECI
 ### 示例
 
 ```bash
+# bash
 # 转换所有通道
-python ims_to_tiff.py D:\data\sample.ims
+imaris-cooker D:\data\sample.ims
 
 # 转换指定通道并指定保存路径
-python ims_to_tiff.py D:\data\sample.ims -save_path D:\output -specify_channel 0,2
+imaris-cooker D:\data\sample.ims -save_path D:\output -specify_channel 0,2
+```
+
+```python
+# python
+import imaris_cooker
+
+# 转换所有通道
+imaris_cooker.convert_ims_to_tiff(r'D:\data\sample.ims')
+
+# 转换指定通道并指定保存路径
+imaris_cooker.convert_ims_to_tiff(r'D:\data\sample.ims',r'D:\data\out', [0, 2])
 ```
 ## 注意事项
 
