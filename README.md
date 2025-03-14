@@ -36,7 +36,7 @@ python ims_to_tiff.py <file_path> [-save_path SAVE_PATH] [-specify_channel SPECI
 
 - `file_path`：必需参数，指定IMS文件的路径
 - `-save_path`：可选参数，指定TIFF文件的保存路径，默认为IMS文件所在目录下的`tiff`文件夹
-- `-specify_channel`：可选参数，指定需要转换的通道索引，多个通道用逗号分隔，例如："0,1,3"或"1,3"
+- `-specify_channel`：可选参数，指定需要转换的通道索引，多个通道用逗号分隔，例如：0,1,3 或 1,3
 
 ### 示例
 
@@ -45,7 +45,7 @@ python ims_to_tiff.py <file_path> [-save_path SAVE_PATH] [-specify_channel SPECI
 python ims_to_tiff.py D:\data\sample.ims
 
 # 转换指定通道并指定保存路径
-python ims_to_tiff.py D:\data\sample.ims -save_path D:\output -specify_channel "0,2"
+python ims_to_tiff.py D:\data\sample.ims -save_path D:\output -specify_channel 0,2
 ```
 ## 注意事项
 
