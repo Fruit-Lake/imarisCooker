@@ -1,0 +1,2 @@
+[console_scripts]
+imaris-cooker = imaris_cooker.ims_to_tiff:cli_main

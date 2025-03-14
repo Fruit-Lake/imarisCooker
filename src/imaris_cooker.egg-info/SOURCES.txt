@@ -1,0 +1,10 @@
+README.md
+setup.py
+src/imaris_cooker/__init__.py
+src/imaris_cooker/ims_to_tiff.py
+src/imaris_cooker.egg-info/PKG-INFO
+src/imaris_cooker.egg-info/SOURCES.txt
+src/imaris_cooker.egg-info/dependency_links.txt
+src/imaris_cooker.egg-info/entry_points.txt
+src/imaris_cooker.egg-info/requires.txt
+src/imaris_cooker.egg-info/top_level.txt
