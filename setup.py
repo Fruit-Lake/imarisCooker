@@ -2,7 +2,7 @@ from setuptools import setup, find_packages
 
 setup(
     name='imaris-cooker',
-    version='0.1.0',
+    version='0.1.1',
     description='A tool for converting IMS format images to TIFF format',
     author='Guanhao Sun',
     packages=find_packages(where='src'),

@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "imaris-cooker"
-version = "0.1.0"
+version = "0.1.1"
 description = "A tool for converting IMS format images to TIFF format"
 authors = [{name = "Guanhao Sun"}]
 requires-python = ">=3.7"
